@@ -1,0 +1,15 @@
+<resources>
+    //should be changed for each store
+    <string name="google_maps_api_key">AIzaSyDkxPXYQAsuN4BzTFLo4C6dU539GP7Bpxo</string>
+    <string name="app_name">Street Burger</string>
+    <string name="appbar_scrolling_view_behavior"></string>
+    <string name="search_your_recipes">rechercher...</string>
+    <string name="meal_categories">Categorie Repas</string>
+    <string name="under_msg">Created by Al Ansari</string>
+    <string name="app_description_top_main">Le Burger Original</string>
+    <string name="nos_repas">Nos Repas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restaurant_name">street burger</string>
+</resources>

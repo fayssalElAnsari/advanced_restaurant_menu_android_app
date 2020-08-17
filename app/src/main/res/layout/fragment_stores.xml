@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.alansaridev.streetburger.fragment.StoresFragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_fragment_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/stores_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.google.android.gms.maps.MapView>
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.alansaridev.streetburger.activities.FullScreenMealActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="75dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toTopOf="@+id/fs_add_to_cart_btn"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:paddingBottom="15dp"
+            tools:context="com.alansaridev.streetburger.activities.FullScreenMealActivity">
+
+            <ImageView
+                android:id="@+id/fs_imageView"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:elevation="190dp"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="@color/colorPrimaryText"
+                android:outlineSpotShadowColor="@color/colorPrimaryText"
+                app:cardCornerRadius="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fs_imageView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/fs_meal_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:elevation="10dp"
+                        android:fontFamily="@font/notosans_bold"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="10dp"
+                        android:text="meal name"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/fs_meal_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/athiti_medium"
+                        android:lineHeight="10dp"
+                        android:lineSpacingExtra="6dp"
+                        android:lineSpacingMultiplier="0.5"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="8dp"
+                        android:text="ceci n'est pas un burger!"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/fs_meal_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/robotoslab_light"
+                        android:gravity="bottom"
+                        android:lineHeight="@dimen/cardview_default_elevation"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="7dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp"
+                        android:text="9.99 €"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/fs_nested_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+                <LinearLayout
+                    android:id="@+id/fs_main_nested_linear_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/fs_add_to_cart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/robotoslab_regular"
+        android:shadowColor="@color/colorWhite"
+        android:text="ajouter au panier  ‧  9.99 €"
+        android:textColor="@color/colorWhite"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
