@@ -1,0 +1,164 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.alansaridev.streetburger.fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground"
+        android:fillViewport="true"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/main_nested_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="103dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="16dp"
+                    android:text="@string/app_description_top_main"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="15dp"
+                    app:cardBackgroundColor="@color/colorPrimaryDark"
+                    app:cardCornerRadius="1dp"
+                    app:cardElevation="10dp">
+
+                    <SearchView
+                        android:id="@+id/search_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/ic_baseline_search_24"
+                        android:drawableLeft="@drawable/ic_baseline_search_24"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"
+                        android:hint="@string/search_your_recipes"
+                        android:onClick="onSearchClick"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimaryLight">
+
+                    </SearchView>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_below="@id/cardSearch"
+                    android:layout_marginTop="10dp"
+                    android:clipToPadding="false"
+                    android:foregroundGravity="center"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/shimmerFeaturedMeals"
+                    layout="@layout/item_view_pager_header_shimmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardSearch"
+                    android:layout_alignBottom="@+id/all_meals_recycler_view" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/all_meals_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nos_repas"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollbars="none" />
+
+
+                <TextView
+                    android:id="@+id/nos_repas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewPagerHeader"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/nos_repas"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <include
+                    android:id="@+id/shimmerMeals"
+                    layout="@layout/item_recycler_category_shimmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nos_repas" />
+
+                <!-- TODO 3 Add Search container -->
+                <!-- We will make a look for the search box with CardView and TextView (this is only for click actions because later we will create another Activity to search) -->
+                <!-- TODO 4 Add <ViewPager> with id viewPagerHeader -->
+
+                <!-- TODO 5 Delete comment to <include below -->
+                <!--<include android:id="@+id/shimmerMeal"
+                    layout="@layout/item_view_pager_header_shimmer" />-->
+
+                <!-- TODO 5 Add <TextView> for title of Category list -->
+
+                <!-- TODO 6 Add <RecyclerView> for display the category list -->
+                <!-- TODO 7 Delete comment to <include below -->
+                <!-- <include android:id="@+id/shimmerCategory"
+                    layout="@layout/item_recycler_category_shimmer" />-->
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/made_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@color/colorPrimaryLight"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/under_msg"
+                android:textColor="@color/colorWhite"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

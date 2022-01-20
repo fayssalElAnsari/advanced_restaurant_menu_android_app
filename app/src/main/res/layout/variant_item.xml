@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="13dp"
+    android:elevation="190dp"
+    android:outlineAmbientShadowColor="@color/colorPrimaryText"
+    android:outlineSpotShadowColor="@color/colorPrimaryText"
+    android:padding="20dp"
+    app:cardCornerRadius="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:clickable="false"
+            android:id="@+id/variant_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="@font/athiti_medium"
+            android:buttonTint="#000000"
+            android:checked="true"
+            android:paddingLeft="5dp"
+            android:text="variant name"
+            android:textSize="16dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/variant_price"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:fontFamily="@font/robotoslab_light"
+            android:gravity="center|right"
+            android:lineHeight="@dimen/cardview_default_elevation"
+            android:text="+9.99 €"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/home_icon"
+        android:iconTint="@color/colorWhite"
+        android:title="Acceuil"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_places"
+        android:enabled="true"
+        android:icon="@drawable/places_icon"
+        android:iconTint="@color/colorWhite"
+        android:title="Nos Magazins"
+        app:showAsAction="always" />
+
+<!--    <item-->
+<!--        android:id="@+id/action_favourites"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/favourites_icon"-->
+<!--        android:iconTint="@color/colorWhite"-->
+<!--        android:title="Favoris"-->
+<!--        app:showAsAction="always" />-->
+
+    <item
+        android:id="@+id/action_order"
+        android:enabled="true"
+        android:icon="@drawable/shopping_cart_icon"
+        android:iconTint="@color/colorWhite"
+        android:title="Commander"
+        app:showAsAction="always" />
+
+</menu>
